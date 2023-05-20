@@ -1,0 +1,51 @@
+query ContentCards($filter: ContentCardsFilter) {
+  contentCards(filter: $filter) {
+    meta {
+      total
+      recommendationId
+    }
+    edges {
+      ... on Podcast {
+        ...Podcast
+      }
+     
+      
+    }
+  }
+}
+
+
+fragment Image on Image {
+  uri
+}
+fragment Category on Category {
+  name
+}
+fragment Expert on Expert {
+  firstName
+  lastName
+  company
+}
+
+fragment Edges on Edges {
+   edges {
+      ... on Podcast {
+        ...Podcast
+      }
+      
+    }
+}
+
+fragment Podcast on Podcast {
+  image {
+    ...Image
+  },
+  name,
+  categories {
+    ...Category
+  }
+  experts {
+    ...Expert
+  }
+}
+
