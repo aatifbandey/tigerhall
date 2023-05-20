@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { css } from "@emotion/react";
 
 export const Card = styled.article`
   display: flex;
@@ -100,7 +99,7 @@ export const ProgressCx = styled.span`
   justify-content: center;
   align-items: center;
   display: flex;
-  width: 50%;
+  width: 55%;
   font-size: 14px;
   font-weight: 700;
   font-size: 12px;
