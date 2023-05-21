@@ -1,10 +1,9 @@
 import dynamic from "next/dynamic";
 import { elementType, object } from "prop-types";
-import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
+import { ApolloProvider } from "@apollo/client";
 import Head from "next/head";
 import ErrorBoundary from "@components/ErrorBoundary";
 import ErrorView from "@components/ErrorView";
-import { LoadingProvider } from "@modules/context/loading";
 import client from "@utils/apollo-client";
 
 import "../styles/globals.css";
@@ -29,13 +28,13 @@ function MyApp(props) {
 
   const renderPublicComponents = () => {
     return (
-      <LoadingProvider>
+     
         <ErrorBoundary render={() => <ErrorView />} debug>
           <App>
             <Component {...pageProps} />
           </App>
         </ErrorBoundary>
-      </LoadingProvider>
+    
     );
   };
 

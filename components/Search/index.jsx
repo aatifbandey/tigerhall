@@ -12,7 +12,7 @@ const Search = (props) => {
   };
   return (
     <Form>
-      <input placeHolder='Search' type="text" onChange={(e) => onChange(e)} />
+      <input placeholder='Search content' type="text" onChange={(e) => onChange(e)} />
     </Form>
   );
 };

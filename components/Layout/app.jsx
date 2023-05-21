@@ -1,5 +1,5 @@
 import React from "react";
-import { node, string } from "prop-types";
+import { node } from "prop-types";
 import { AppBar } from "./styles";
 
 const AppLayout = (props) => {
@@ -10,7 +10,6 @@ const AppLayout = (props) => {
 
 AppLayout.propTypes = {
   children: node.isRequired,
-  pathname: string.isRequired,
 };
 
 export default AppLayout;

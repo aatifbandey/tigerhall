@@ -113,6 +113,7 @@ export const ProgressCx = styled.span`
     color: #383733;
     font-weight: 700;
     font-size: 12px;
+    font-family: 'Montreal Bold';
   }
 `;
 
