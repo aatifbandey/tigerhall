@@ -58,27 +58,9 @@ function MyApp(props) {
   );
 }
 
-MyApp.getInitialProps = async ({ Component, ctx }) => {
-  const pageProps = {};
-  let error = null;
-
-  if (Component.getInitialProps) {
-    try {
-      Object.assign(pageProps, await Component.getInitialProps(ctx));
-    } catch (err) {
-      error = ResponseError.handle(err, ctx);
-    }
-  }
-
-  return {
-    pageProps,
-    error,
-  };
-};
 
 MyApp.propTypes = {
   Component: elementType.isRequired,
-
   error: object,
 };
 
